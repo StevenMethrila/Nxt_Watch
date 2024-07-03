@@ -75,13 +75,13 @@ class VideoItemDetailsRoute extends Component {
     switch (dataFetchStatus) {
       case dataFetchStatusConstants.loading:
         return (
-          <LoaderOrFailureContainer data-testid="loader" value={lightTheme}>
+          <LoaderOrFailureContainer data-testid='loader' value={lightTheme}>
             <LoaderComponent
               as={Loader}
-              type="ThreeDots"
-              color="#4f46e5"
-              height="50"
-              width="50"
+              type='ThreeDots'
+              color='#4f46e5'
+              height='50'
+              width='50'
             />
           </LoaderOrFailureContainer>
         )
@@ -98,8 +98,8 @@ class VideoItemDetailsRoute extends Component {
               as={ReactPlayer}
               url={videoDetails.video_url}
               controls
-              width="100%"
-              height="70vh"
+              width='100%'
+              height='70vh'
             />
 
             <VideoTitle value={lightTheme}>{videoDetails.title}</VideoTitle>
@@ -157,14 +157,14 @@ class VideoItemDetailsRoute extends Component {
                   return (
                     <ButtonContainer>
                       <CustomizeButton
-                        type="button"
+                        type='button'
                         onClick={addToLiked}
                         value={likedList.includes(id)}
                       >
                         <BiLike /> Like
                       </CustomizeButton>
                       <CustomizeButton
-                        type="button"
+                        type='button'
                         onClick={addToDisLiked}
                         value={dislikedList.includes(id)}
                       >
@@ -172,7 +172,7 @@ class VideoItemDetailsRoute extends Component {
                       </CustomizeButton>
 
                       <CustomizeButton
-                        type="button"
+                        type='button'
                         onClick={toSaveOrUnSave}
                         value={savedListIds.includes(id)}
                       >
@@ -188,7 +188,7 @@ class VideoItemDetailsRoute extends Component {
             <ChannelDetailsContainer>
               <ChannelImage
                 src={channel.profile_image_url}
-                alt="channel logo"
+                alt='channel logo'
               />
               <div>
                 <ChannelTitle value={lightTheme}>{channel.name}</ChannelTitle>
@@ -218,7 +218,7 @@ class VideoItemDetailsRoute extends Component {
               const {lightTheme} = value
               return (
                 <TrendingComponentContainer
-                  data-testid="videoItemDetails"
+                  data-testid='videoItemDetails'
                   value={lightTheme}
                 >
                   {this.renderRoutePartOnDataResponse(lightTheme)}
